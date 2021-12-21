@@ -18,9 +18,13 @@ public class Main {
             System.out.println(employee.getEmployeeId()+" "+employee.getName()+" "+employee.getSalary());
         }*/
 
-        /*
+        employeeList.forEach(
+                employee -> {
+                    System.out.println(employee.getEmployeeId()+" "+employee.getName()+" "+employee.getSalary());
+                }
+        );
 
-      List<Employee>  emp = employeeList.stream().filter(employee -> employee.getSalary()>1500).map(e->{
+     /* List<Employee>  emp = employeeList.stream().filter(employee -> employee.getSalary()>1500).map(e->{
            e.setName(e.getName()+"-dummy");
             return e;
         }).collect(Collectors.toList());
